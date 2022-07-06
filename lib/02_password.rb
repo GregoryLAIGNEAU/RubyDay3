@@ -6,20 +6,15 @@ def signup
 end
 
 def login(def_password)
-    puts "Saissisez votre mot de passe"
-    print "> "
-    password = gets.chomp 
+    password = ""
     loop do
-        if def_password != password
-            puts "Le mot de passe n'est pas correct"
-            password = gets.chomp
-        else
-            welcome_screen
-            break
-        end
+        puts "Saissisez votre mot de passe"
+        print "> "
+        password = gets.chomp 
+            break if def_password == password     
     end
+    welcome_screen
 end
-
 
 def welcome_screen
     puts "Bienvenu dans votre zone secrète"
