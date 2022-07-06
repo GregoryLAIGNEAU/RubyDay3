@@ -11,6 +11,7 @@ def login(def_password)
         puts "Saissisez votre mot de passe"
         print "> "
         password = gets.chomp 
+        puts "Mot de passe incorrect"
             break if def_password == password     
     end
     welcome_screen
